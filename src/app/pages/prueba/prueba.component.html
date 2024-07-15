@@ -1,0 +1,95 @@
+<mat-card class="form-card">
+  <mat-card-content class="form-card-content">
+    <form (submit)="guardar($event)">
+      <!-- entradaForm.value -->
+      <div class="form">
+        <mat-form-field>
+          <mat-label>Fecha de recepción</mat-label>
+          <input
+            matInput
+            [matDatepicker]="picker"
+            formControlName="fecha"
+            required
+          />
+          <mat-datepicker-toggle
+            matIconSuffix
+            [for]="picker"
+          ></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+          <mat-error *ngIf="entradaForm.get('fecha')?.hasError('required')">
+            La fecha de recepción es obligatoria.
+          </mat-error>
+        </mat-form-field>
+
+        <mat-form-field>
+          <mat-label>Entrega</mat-label>
+          <input matInput formControlName="entrega" required />
+          <mat-error *ngIf="entradaForm.get('entrega')?.hasError('required')">
+            La entrega es obligatoria.
+          </mat-error>
+        </mat-form-field>
+
+        <mat-form-field>
+          <mat-label>Puesto de quien entrega</mat-label>
+          <input matInput formControlName="puesto" required />
+          <mat-error *ngIf="entradaForm.get('puesto')?.hasError('required')">
+            El puesto es obligatorio.
+          </mat-error>
+        </mat-form-field>
+
+        <mat-form-field>
+          <mat-label>Empresa de quien entrega</mat-label>
+          <input matInput formControlName="empresa" required />
+          <mat-error *ngIf="entradaForm.get('empresa')?.hasError('required')">
+            La empresa es obligatoria.
+          </mat-error>
+        </mat-form-field>
+
+        <mat-form-field>
+          <mat-label>Observaciones</mat-label>
+          <input matInput formControlName="observaciones" />
+        </mat-form-field>
+
+        <mat-form-field>
+          <mat-label>Inmueble</mat-label>
+          <mat-select formControlName="inmuebleId" required>
+            <mat-option
+              *ngFor="let inmueble of inmuebles"
+              [value]="inmueble.ID"
+              >{{ inmueble.nombre_inmueble }}</mat-option
+            >
+          </mat-select>
+          <mat-error
+            *ngIf="entradaForm.get('inmuebleId')?.hasError('required')"
+          >
+            El inmueble es obligatorio.
+          </mat-error>
+        </mat-form-field>
+
+        <mat-form-field>
+          <mat-label>Motivo</mat-label>
+          <mat-select formControlName="motivo" required>
+            <mat-option value="inventario">Inventario general</mat-option>
+            <mat-option value="resguardo">Resguardo</mat-option>
+            <mat-option value="reingreso">Reingreso</mat-option>
+          </mat-select>
+          <mat-error *ngIf="entradaForm.get('motivo')?.hasError('required')">
+            El motivo es obligatorio.
+          </mat-error>
+        </mat-form-field>
+      </div>
+      <div class="example-section">
+        <span class="recibo">Descargar recibo: </span
+        ><mat-checkbox formControlName="descargar"></mat-checkbox>
+        <button
+          mat-raised-button
+          [disabled]="entradaForm.invalid"
+          type="submit"
+          color="primary"
+        >
+          Enviar
+        </button>
+      </div>
+    </form>
+  </mat-card-content>
+</mat-card>

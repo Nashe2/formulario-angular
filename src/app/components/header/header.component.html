@@ -1,0 +1,32 @@
+<div class="example-container">
+  <mat-toolbar color="primary" class="example-toolbar">
+    <button mat-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+      <h2>Menú</h2>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item>
+          <mat-icon>home</mat-icon>
+          <span>Home</span>
+        </button>
+        <button mat-menu-item>
+          <mat-icon>checkroom</mat-icon>
+          <span>Formulario</span>
+        </button>
+        <button mat-menu-item disabled>
+          <mat-icon>search</mat-icon>
+          <span>Servicios</span>
+        </button>
+        <button mat-menu-item disabled>
+          <mat-icon>notifications_off</mat-icon>
+          <span>Disable alerts</span>
+        </button>
+        <button mat-menu-item disabled>
+          <mat-icon>search</mat-icon>
+          <span>Buscar</span>
+        </button>
+      </mat-menu>
+    <!--  <div class="button-shopping">
+        <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="shopping_cart"></mat-icon>
+      </div> -->
+    </button>
+  </mat-toolbar>
+</div>
