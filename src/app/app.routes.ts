@@ -5,6 +5,7 @@ import { BasicFormComponent } from './components/basic-form/basic-form.component
 import { HeaderComponent } from './components/header/header.component';
 import { PruebaComponent } from './pages/prueba/prueba.component';
 import { LayoutComponent } from './layout/layout.component';
+import { MultiCamposComponent } from './pages/multi-campos/multi-campos.component';
 
 export const routes: Routes = [
   {
@@ -19,6 +20,10 @@ export const routes: Routes = [
         path: 'prueba',
         component: PruebaComponent,
       },
+      {
+        path: 'formMultiplesCampos',
+        component: MultiCamposComponent,
+      }
     ],
   },/* termina los hijos del layout */
   {
