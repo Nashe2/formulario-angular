@@ -1,14 +1,14 @@
 import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MaterialComponentModule } from '../../material-component/material-component.module';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
 import { LayoutComponent } from '../../layout/layout.component';
 import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-prueba',
   standalone: true,
-  imports: [CommonModule, MaterialComponentModule, LayoutComponent, RouterModule],
+  imports: [CommonModule, MaterialComponentModule, LayoutComponent, RouterModule, ReactiveFormsModule],
   templateUrl: './prueba.component.html',
   styleUrl: './prueba.component.scss'
 })

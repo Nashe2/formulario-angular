@@ -1,6 +1,6 @@
 <mat-card class="form-card">
   <mat-card-content class="form-card-content">
-    <form (submit)="guardar($event)">
+    <form [formGroup]="entradaForm" (submit)="guardar($event)">
       <!-- entradaForm.value -->
       <div class="form">
         <mat-form-field>
