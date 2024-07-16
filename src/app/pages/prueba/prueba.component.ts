@@ -12,7 +12,7 @@ import { RouterModule } from '@angular/router';
   templateUrl: './prueba.component.html',
   styleUrl: './prueba.component.scss'
 })
-export class PruebaComponent {
+export class PruebaComponent{
   private formB = inject(FormBuilder);
   entradaForm: FormGroup;
 
@@ -33,6 +33,8 @@ export class PruebaComponent {
       descargar: [false],
     });
   }
+
+  /* ngOnInit(){} */
 
   guardar(event: Event) {
     /* value: any */
