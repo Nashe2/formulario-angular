@@ -6,8 +6,9 @@ import {
   Validators,
   FormControl
 } from '@angular/forms';
-import { LayoutComponent } from '../../layout/layout.component';
 import { RouterModule } from '@angular/router';
+/* import { LayoutComponent } from '../../layout/layout.component'; */
+
 @Component({
   selector: 'app-basic-form',
   standalone: true,
@@ -16,8 +17,7 @@ import { RouterModule } from '@angular/router';
     MaterialComponentModule,
     ReactiveFormsModule,
     RouterModule,
-    LayoutComponent,
-  ],
+  ],/*     LayoutComponent, */
   templateUrl: './basic-form.component.html',
   styleUrl: './basic-form.component.scss',
 })
