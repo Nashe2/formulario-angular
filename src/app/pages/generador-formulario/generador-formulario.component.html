@@ -11,7 +11,29 @@
           formControlName="name"
         />
         <mat-error *ngIf="nameField?.hasError('required')">
-          El nombre es obligatorio
+          El nombre es obligatorio.
+        </mat-error>
+        <mat-error *ngIf="nameField?.hasError('pattern')">
+          El nombre no debe tener caracteres especiales.
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Edad</mat-label>
+        <input
+          matInput
+          placeholder="Placeholder"
+          type="age"
+          formControlName="age"
+        />
+        <mat-error *ngIf="ageField?.hasError('required')">
+          La edad es obligatorio
+        </mat-error>
+        <mat-error *ngIf="ageField?.hasError('min')">
+          La edad mínima es de 18
+        </mat-error>
+        <mat-error *ngIf="ageField?.hasError('max')">
+          La edad máxima es de 110
         </mat-error>
       </mat-form-field>
 

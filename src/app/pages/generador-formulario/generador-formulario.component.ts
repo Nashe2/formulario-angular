@@ -34,7 +34,8 @@ export class GeneradorFormularioComponent implements OnInit {
 
   private buildForm(){
     this.formu = this.fromBuilder.group({
-    name: ['', [Validators.required]],
+    name: ['', [Validators.required, Validators.pattern(/^[a-zA]+$/)]],/* agregar condición para que acepte la ñ */
+    age: [18, [Validators.required, Validators.min(18), Validators.max(110)]],
     email: ['', [Validators.email]],
     phone: ['', [Validators.required, Validators.maxLength(10)]],
     color: ['#000000'],
@@ -56,6 +57,10 @@ export class GeneradorFormularioComponent implements OnInit {
 
     get nameField() {
       return this.formu.get('name');
+    }
+
+    get ageField() {
+      return this.formu.get('age');
     }
 
     get emailField() {
