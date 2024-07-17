@@ -4,7 +4,7 @@ import { MaterialComponentModule } from '../../material-component/material-compo
 import {
   ReactiveFormsModule,
   Validators,
-  FormControl
+  FormControl,
 } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 /* import { LayoutComponent } from '../../layout/layout.component'; */
@@ -24,16 +24,17 @@ import { RouterModule } from '@angular/router';
 export class BasicFormComponent {
 
   nameControl= new FormControl('', Validators.required);
-  emailControl= new FormControl('', Validators.email);
+  emailControl= new FormControl('', [Validators.required, Validators.email]);
   phoneControl= new FormControl('', [Validators.required, Validators.maxLength(10)]);
 
   colorControl= new FormControl('#000000');
   dateControl= new FormControl('');
   escolarControl= new FormControl('bachillerato');
-  pasatiempoControl= new FormControl('');
+  pasatiempoControl= new FormControl('',  Validators.required);
   estadoControl= new FormControl('soltero', Validators.required);
 
-  genderControl= new FormControl('');
-  policyControl= new FormControl(false, Validators.required);
-  terminoControl= new FormControl(false, Validators.required);
+  genderControl= new FormControl('', Validators.required);
+  policyControl= new FormControl(false, Validators.requiredTrue);
+  terminoControl= new FormControl(false, Validators.requiredTrue);
+
 }
