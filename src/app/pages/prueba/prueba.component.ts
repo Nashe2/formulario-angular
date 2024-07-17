@@ -13,7 +13,7 @@ import { RouterModule } from '@angular/router';
   styleUrl: './prueba.component.scss'
 })
 export class PruebaComponent{
-  private formB = inject(FormBuilder);
+  private fb = inject(FormBuilder);
   entradaForm: FormGroup;
 
   inmuebles = [
@@ -21,7 +21,7 @@ export class PruebaComponent{
     { ID: 2, nombre_inmueble: 'Inmueble 2' },
   ];
 
-  constructor(private fb: FormBuilder) {
+  constructor(/* private fb: FormBuilder */) {
     this.entradaForm = this.fb.group({
       fecha: ['', Validators.required],
       entrega: ['', Validators.required],
