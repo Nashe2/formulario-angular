@@ -6,6 +6,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { PruebaComponent } from './pages/prueba/prueba.component';
 import { LayoutComponent } from './layout/layout.component';
 import { MultiCamposComponent } from './pages/multi-campos/multi-campos.component';
+import { GeneradorFormularioComponent } from './pages/generador-formulario/generador-formulario.component';
 
 export const routes: Routes = [
   {
@@ -23,6 +24,10 @@ export const routes: Routes = [
       {
         path: 'formMultiplesCampos',
         component: MultiCamposComponent,
+      },
+      {
+        path: 'generador',
+        component: GeneradorFormularioComponent
       }
     ],
   },/* termina los hijos del layout */
