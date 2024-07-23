@@ -7,6 +7,8 @@ import { PruebaComponent } from './pages/prueba/prueba.component';
 import { LayoutComponent } from './layout/layout.component';
 import { MultiCamposComponent } from './pages/multi-campos/multi-campos.component';
 import { GeneradorFormularioComponent } from './pages/generador-formulario/generador-formulario.component';
+import { MultipleFgComponent } from './pages/multiple-fg/multiple-fg.component';
+import { InfoTableComponent } from './components/info-table/info-table.component';
 
 export const routes: Routes = [
   {
@@ -28,6 +30,14 @@ export const routes: Routes = [
       {
         path: 'generador',
         component: GeneradorFormularioComponent
+      },
+      {
+        path: 'formFromGrup',
+        component: MultipleFgComponent
+      },
+      {
+        path:'infoTable',
+        component: InfoTableComponent
       }
     ],
   },/* termina los hijos del layout */
