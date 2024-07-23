@@ -2,8 +2,9 @@
   <mat-card-content class="form-card-content">
     <form [formGroup]="entradaForm" (submit)="guardar($event)">
       <!-- entradaForm.value -->
+       <h1 class="form-titulo">Prueba</h1>
       <div class="form">
-        <mat-form-field>
+        <mat-form-field appearance="outline">
           <mat-label>Fecha de recepción</mat-label>
           <input
             matInput
@@ -21,7 +22,7 @@
           </mat-error>
         </mat-form-field>
 
-        <mat-form-field>
+        <mat-form-field appearance="outline">
           <mat-label>Entrega</mat-label>
           <input matInput formControlName="entrega" required />
           <mat-error *ngIf="entradaForm.get('entrega')?.hasError('required')">
@@ -29,7 +30,7 @@
           </mat-error>
         </mat-form-field>
 
-        <mat-form-field>
+        <mat-form-field appearance="outline">
           <mat-label>Puesto de quien entrega</mat-label>
           <input matInput formControlName="puesto" required />
           <mat-error *ngIf="entradaForm.get('puesto')?.hasError('required')">
@@ -37,7 +38,7 @@
           </mat-error>
         </mat-form-field>
 
-        <mat-form-field>
+        <mat-form-field appearance="outline">
           <mat-label>Empresa de quien entrega</mat-label>
           <input matInput formControlName="empresa" required />
           <mat-error *ngIf="entradaForm.get('empresa')?.hasError('required')">
@@ -45,12 +46,12 @@
           </mat-error>
         </mat-form-field>
 
-        <mat-form-field>
+        <mat-form-field appearance="outline">
           <mat-label>Observaciones</mat-label>
           <input matInput formControlName="observaciones" />
         </mat-form-field>
 
-        <mat-form-field>
+        <mat-form-field appearance="outline">
           <mat-label>Inmueble</mat-label>
           <mat-select formControlName="inmuebleId" required>
             <mat-option
@@ -66,7 +67,7 @@
           </mat-error>
         </mat-form-field>
 
-        <mat-form-field>
+        <mat-form-field appearance="outline">
           <mat-label>Motivo</mat-label>
           <mat-select formControlName="motivo" required>
             <mat-option value="inventario">Inventario general</mat-option>

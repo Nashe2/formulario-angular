@@ -1,7 +1,8 @@
 <mat-card class="form-card">
   <mat-card-content class="form-card-content">
     <form [formGroup]="form" (submit)="guardar($event)">
-      <h1>Uso de input y la importancia del type</h1>
+      <h1 class="form-titulo">Formulario usando FormGrup para múltiples campos</h1>
+      <h2 class="form-subtitulo">Uso de input y la importancia del type</h2>
       <mat-form-field appearance="outline">
         <mat-label>Nombre</mat-label>
         <input
@@ -15,7 +16,7 @@
         </mat-error>
       </mat-form-field>
 
-      <mat-form-field>
+      <mat-form-field appearance="outline">
         <mat-label>Correo electrónico</mat-label>
         <input
           matInput
@@ -24,9 +25,12 @@
           formControlName="email"
         />
         <mat-icon matSuffix>email</mat-icon>
+        <mat-error *ngIf="emailField?.hasError('required')">
+          El correo es obligatorio
+        </mat-error>
       </mat-form-field>
 
-      <mat-form-field>
+      <mat-form-field appearance="outline">
         <mat-label>Celular</mat-label>
         <input
           matInput
@@ -40,7 +44,7 @@
         </mat-error>
       </mat-form-field>
 
-      <mat-form-field>
+      <mat-form-field appearance="outline">
         <mat-label>Color</mat-label>
         <input
           matInput
@@ -50,7 +54,7 @@
         />
       </mat-form-field>
 
-      <mat-form-field class="form-field-date">
+      <mat-form-field class="form-field-date" appearance="outline">
         <mat-label>Fecha</mat-label>
         <input
           matInput
@@ -69,8 +73,8 @@
         </mat-error>
       </mat-form-field>
 
-      <h1>Binding de select y select multiple</h1>
-      <mat-form-field>
+      <h2 class="form-subtitulo">Binding de select y select multiple</h2>
+      <mat-form-field appearance="outline">
         <mat-label>Nivel escolar</mat-label>
         <mat-select formControlName="escolar">
           <mat-option value="primaria">Primaria</mat-option>
@@ -83,7 +87,7 @@
         >
       </mat-form-field>
 
-      <mat-form-field>
+      <mat-form-field appearance="outline">
         <mat-label>Pasatiempo</mat-label>
         <mat-select multiple formControlName="pasatiempo">
           <mat-option value="leer">Leer</mat-option>
@@ -105,7 +109,7 @@
         >
       </mat-form-field>
 
-      <h1>Binding de input radio y checkbox</h1>
+      <h2 class="form-subtitulo">Binding de input radio y checkbox</h2>
       <section>
         <mat-label>Genero: </mat-label>
         <mat-radio-group aria-label="Select an option" formControlName="gender">

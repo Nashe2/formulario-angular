@@ -14,12 +14,12 @@ export class MultiCamposComponent implements OnInit {
   /* Formulario usando FormGrup para multiples campos*/
   form = new FormGroup({
     name: new FormControl('', Validators.required),
-    email: new FormControl('', Validators.email),
+    email: new FormControl('', [Validators.email, Validators.required]),
     phone: new FormControl('', [Validators.required, Validators.maxLength(10)]),
     color: new FormControl('#000000'),
-    date: new FormControl(''),
+    date: new FormControl('', Validators.required),
     escolar: new FormControl('bachillerato'),
-    pasatiempo: new FormControl(''),
+    pasatiempo: new FormControl('', Validators.required),
     estado: new FormControl('soltero', Validators.required),
     gender: new FormControl(''),
     policy: new FormControl(false, Validators.required),

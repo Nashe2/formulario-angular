@@ -16,19 +16,6 @@ export class GeneradorFormularioComponent implements OnInit {
 
   constructor(private fromBuilder: FormBuilder){
   this.buildForm();
-/*   this.formu = this.fromBuilder.group({
-    name: ['', [Validators.required]],
-    email: ['', [Validators.email]],
-    phone: ['', [Validators.required, Validators.maxLength(10)]],
-    color: ['#000000'],
-    date: [''],
-    escolar: ['bachillerato'],
-    pasatiempo: [''],
-    estado: ['soltero', [Validators.required]],
-    gender: [''],
-    policy: [false, [Validators.required]],
-    termino: [false, [Validators.required]],
-    }); */
   }
 
 
@@ -36,12 +23,12 @@ export class GeneradorFormularioComponent implements OnInit {
     this.formu = this.fromBuilder.group({
     name: ['', [Validators.required, Validators.pattern(/^[a-zA]+$/)]],/* agregar condición para que acepte la ñ */
     age: [18, [Validators.required, Validators.min(18), Validators.max(110)]],
-    email: ['', [Validators.email]],
+    email: ['', [Validators.email, Validators.required]],
     phone: ['', [Validators.required, Validators.maxLength(10)]],
     color: ['#000000'],
     date: [''],
     escolar: ['bachillerato'],
-    pasatiempo: [''],
+    pasatiempo: ['', [Validators.required]],
     estado: ['soltero', [Validators.required]],
     gender: [''],
     policy: [false, [Validators.requiredTrue]],
