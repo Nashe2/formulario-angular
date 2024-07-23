@@ -34,6 +34,30 @@ body {
   color: #6200ee;
 }
 
+.form-titulo {
+  color:#6200ee;
+  text-align: center;
+}
+
+.form-subtitulo {
+  color: #8b70b0;
+}
+
+.table-content{
+  display: flex;
+  flex-direction: column;
+  margin-top: 15px;
+}
+
+.table {
+margin-top: 10px;
+}
+
+.table-titulo {
+  color:#6200ee;
+  text-align: center;
+}
+
 /*
 Pagina no encontrada
 .titulo-pagina {
