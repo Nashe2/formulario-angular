@@ -29,6 +29,7 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatIconModule} from '@angular/material/icon';
 import {MatInputModule} from '@angular/material/input';
+import { MatSortModule } from '@angular/material/sort';
 // Creación de módulo sin routing
 // ng g m material-componente
 
@@ -87,6 +88,7 @@ import {MatInputModule} from '@angular/material/input';
     MatSelectModule,
     MatTableModule,
     MatPaginatorModule,
+    MatSortModule,
     MatTabsModule,
     MatCheckboxModule,
     MatRadioModule,

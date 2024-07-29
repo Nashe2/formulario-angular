@@ -11,6 +11,7 @@ body {
 .form-card {
   display: flex;
   flex-direction: column;
+  margin-top: 60px;
 
   mat-form-field {
     width: 100%;
@@ -46,7 +47,7 @@ body {
 .table-content{
   display: flex;
   flex-direction: column;
-  margin-top: 15px;
+/*   margin-top: 45px; */
 }
 
 .table {
