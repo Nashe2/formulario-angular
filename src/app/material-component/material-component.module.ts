@@ -30,6 +30,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatIconModule} from '@angular/material/icon';
 import {MatInputModule} from '@angular/material/input';
 import { MatSortModule } from '@angular/material/sort';
+import {MatBottomSheetModule} from '@angular/material/bottom-sheet';
 // Creación de módulo sin routing
 // ng g m material-componente
 
@@ -99,7 +100,8 @@ import { MatSortModule } from '@angular/material/sort';
     MatChipsModule,
     MatButtonToggleModule,
     MatStepperModule,
-    MatTooltipModule
+    MatTooltipModule,
+    MatBottomSheetModule,
   ]
 })
 export class MaterialComponentModule { }
